@@ -1,14 +1,12 @@
 package io.jjlu.util;
 
-import com.sun.istack.internal.Nullable;
-
 /**
  * @author jjlu521016
  * @since 20191226
  */
 public class ValidateUtils {
 
-    public static <T> T checkNotNull(T reference, @Nullable Object errorMessage) {
+    public static <T> T checkNotNull(T reference, Object errorMessage) {
         if (reference == null) {
             throw new NullPointerException(String.valueOf(errorMessage));
         } else {
@@ -24,4 +22,9 @@ public class ValidateUtils {
         }
     }
 
+    public static void checkArgument(boolean expression, Object errorMessage) {
+        if (expression) {
+            throw new IllegalArgumentException(String.valueOf(errorMessage));
+        }
+    }
 }
