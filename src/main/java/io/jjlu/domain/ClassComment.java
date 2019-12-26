@@ -3,7 +3,7 @@ package io.jjlu.domain;
 import java.util.List;
 
 /**
- * @author lujie
+ * @author jjlu521016
  * @since 20191226
  */
 public class ClassComment {
